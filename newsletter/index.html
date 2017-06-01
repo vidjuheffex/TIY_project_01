@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+  <head>
+    <title>Bent Creek Ceramics - Newsletter</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,400,400i,700|Roboto:300,300i,400,400i" rel="stylesheet">
+    <link href="../styles.css" type="text/css" rel="stylesheet">
+    <link rel="icon" type="image/png" href="../favicon.png">
+  </head>
+  <body>
+    <nav class="nav-wrapper">
+      <div class="logo-wrapper">
+        <div class="logo"></div>
+      </div>
+      <ul class="nav-bar">
+        <li class="nav-item"><a href="../index.html">Home</a></li>
+        <li class="nav-item"><a href="../about/index.html">About</a></li>
+        <li class="nav-item active"><a href="index.html">Newsletter</a></li>
+      </ul>
+    </nav>
+    <div class="main-wrapper">
+      <main class="full-screen-bg"> 
+        <div class="newsletter-flex">
+          <section class="newsletter-form-wrapper">
+            <h2>Sign Up for Our Weekly Newsletter</h2>
+            <h3>Stay up to date with events, activities, news and specials.</h3>
+            <form>
+              <fieldset>
+                <div class="form-row"><label for="nameInput">Name</label><input class="field-input" type="text" id="nameInput" required></div>
+                <div class="form-row"><label for="emailInput">Email</label><input class="field-input" type="email" id="emailInput" required></div>
+                <input type="submit" id="signupButton">          
+              </fieldset>
+            </form>
+          </section>
+        </div>
+        <footer>
+          <span>Copyright 2017, Bent Creek Ceramics</span>
+        </footer>
+      </main>
+    </div>
+    <script type="text/javascript">
+  var nameInput = document.getElementById('nameInput');
+  var emailInput = document.getElementById('emailInput');
+  var signupButton = document.getElementById('signupButton');
+  signupButton.addEventListener('click', function(e) {
+    var nameVal = nameInput.value;
+    var emailVal = emailInput.value;
+    if (nameVal && emailVal) {
+      alert('Thanks for signing up, ' + nameVal + '. Newsletters will be sent to ' + emailVal);
+      nameInput.value = "";
+      emailInput.value = "";
+    } else {
+      alert('We would love for you to sign up, please provide both your name and email address.');
+    }
+  });
+</script>
+  </body>
+</html>
+
+  
+  
